@@ -1,49 +1,180 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofino Barbería</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofino - Peluquería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #f3f3f3;
+      background-color: #0a0a0f;
+    }
+    header {
+      background-color: #0b0c10;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #c9a94f;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #c9a94f;
+    }
+    nav a {
+      color: #f3f3f3;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #c9a94f;
+    }
+    .hero {
+      background: url('/mnt/data/file-HZDX1nhyNJn6wKPPjEYyeq') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #f3f3f3;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .hero button {
+      background-color: #c9a94f;
+      color: #0d0d0d;
+      padding: 12px 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #c9a94f;
+    }
+    .services, .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .services div, .gallery img {
+      background-color: #1a1b22;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .gallery img {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: filter 0.3s, transform 0.3s;
+    }
+    .gallery img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+    .button-reserve {
+      background-color: #c9a94f;
+      color: #0d0d0d;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .button-reserve:hover {
+      background-color: #e6c867;
+    }
+    footer {
+      background-color: #0b0c10;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 2px solid #c9a94f;
+    }
+    a {
+      color: #c9a94f;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <img src="logo1.png" alt="Portofino Logo" class="logo" />
-    <h1>Portofino Barbería</h1>
-    <p class="slogan">Elegancia y estilo a otro nivel</p>
-    <a href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino" class="whatsapp-btn" target="_blank">Reservar por WhatsApp</a>
+  <header>
+    <h1>Portofino</h1>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#reserva">Reservar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <section class="about" data-aos="fade-up">
-    <h2>¿Quiénes somos?</h2>
-    <p>En Portofino, combinamos técnica, elegancia y atención personalizada para brindarte una experiencia única de barbería.</p>
-    <img src="img1.jpg" alt="Interior de la barbería" class="responsive-img" />
+  <section class="hero">
+    <h2>Estilo, Precisión y Lujo</h2>
+    <a href="#reserva"><button>Reservá tu turno</button></a>
   </section>
 
-  <section class="gallery" data-aos="fade-up">
-    <h2>Galería</h2>
-    <div class="gallery-grid">
-      <img src="img2.jpg" alt="Corte de cabello 1" />
-      <img src="img3.jpg" alt="Corte de cabello 2" />
-      <img src="img4.jpg" alt="Servicio premium" />
+  <section class="section" id="servicios">
+    <h3>Servicios</h3>
+    <div class="services">
+      <div>Corte Clásico</div>
+      <div>Corte Degradado</div>
+      <div>Afeitado y Barba</div>
+      <div>Mascarilla Facial</div>
     </div>
   </section>
 
-  <section class="schedule" data-aos="fade-up">
-    <h2>Horarios de atención</h2>
-    <p>Martes a Sábados<br>de 9:00 a 19:00 hs</p>
+  <section class="section" id="reserva">
+    <h3>Reserva tu turno</h3>
+    <a href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino" target="_blank" class="button-reserve">Reservar por WhatsApp</a>
   </section>
 
-  <footer>
-    <p>© 2025 Portofino Barbería</p>
-    <p><a href="https://instagram.com/Portofino.barber" target="_blank">@Portofino.barber</a></p>
-  </footer>
+  <section class="section gallery">
+    <h3>Antes y Después</h3>
+    <div class="gallery">
+      <img src="/mnt/data/file-HZDX1nhyNJn6wKPPjEYyeq" alt="Logo 1">
+      <img src="/mnt/data/file-7mcEr7TqxPsXuhwckvBWX5" alt="Logo 2">
+      <img src="/mnt/data/file-51YDxT9syyPz25CVecPeAG" alt="Logo 3">
+    </div>
+  </section>
 
-  <script>
-    AOS.init();
-  </script>
+  <footer id="contacto">
+    <p>📍 Rafaela, Santa Fe</p>
+    <p>📱 <a href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino">+54 9 3492 220922</a></p>
+    <p>📷 <a href="https://instagram.com/Portofino.barber" target="_blank">@Portofino.barber</a></p>
+    <p>🕒 Martes a Sábados de 9 a 19 hs</p>
+  </footer>
 </body>
 </html>
