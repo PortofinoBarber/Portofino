@@ -1,97 +1,136 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofino Barbería</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
-      color: #f5f5f5;
-    }header {
-  background-color: #1c1c1c;
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+  <header class="hero">
+    <img src="logo1.png" alt="Portofino Logo" class="logo" />
+    <h1>Portofino Barbería</h1>
+    <p class="slogan">Elegancia y estilo a otro nivel</p>
+    <a href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino" class="whatsapp-btn" target="_blank">Reservar por WhatsApp</a>
+  </header>
+
+  <section class="about" data-aos="fade-up">
+    <h2>¿Quiénes somos?</h2>
+    <p>En Portofino, combinamos técnica, elegancia y atención personalizada para brindarte una experiencia única de barbería.</p>
+    <img src="img1.jpg" alt="Interior de la barbería" class="responsive-img" />
+  </section>
+
+  <section class="gallery" data-aos="fade-up">
+    <h2>Galería</h2>
+    <div class="gallery-grid">
+      <img src="img2.jpg" alt="Corte de cabello 1" />
+      <img src="img3.jpg" alt="Corte de cabello 2" />
+      <img src="img4.jpg" alt="Servicio premium" />
+    </div>
+  </section>
+
+  <section class="schedule" data-aos="fade-up">
+    <h2>Horarios de atención</h2>
+    <p>Martes a Sábados<br>de 9:00 a 19:00 hs</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Portofino Barbería</p>
+    <p><a href="https://instagram.com/Portofino.barber" target="_blank">@Portofino.barber</a></p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0e0e0e;
+  color: #f5f5f5;
+}
+
+.hero {
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #1c1c1c, #0e0e0e);
 }
 
-header img {
-  width: 150px;
-  animation: spin 6s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-h1 {
-  margin-top: 1rem;
-  font-size: 2.5rem;
-  color: gold;
-}
-
-section {
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-.servicios, .galeria, .contacto {
-  background-color: #1e1e1e;
-  margin-top: 2rem;
-  border-radius: 15px;
-  padding: 2rem;
-}
-
-.galeria img {
-  width: 100%;
-  border-radius: 10px;
+.logo {
+  width: 120px;
+  height: auto;
   margin-bottom: 1rem;
 }
 
-.boton-whatsapp {
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #d4af37;
+  margin: 0.5rem 0;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.whatsapp-btn {
   display: inline-block;
-  background-color: gold;
-  color: black;
-  padding: 1rem 2rem;
-  border-radius: 30px;
+  padding: 0.8rem 1.5rem;
+  background-color: #25D366;
+  color: white;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
 }
 
+.about,
+.gallery,
+.schedule {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about h2,
+.gallery h2,
+.schedule h2 {
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 footer {
-  background-color: #1c1c1c;
   text-align: center;
   padding: 2rem;
-  font-size: 0.9rem;
+  background-color: #1a1a1a;
+  color: #ccc;
 }
 
 footer a {
-  color: gold;
+  color: #d4af37;
   text-decoration: none;
 }
-
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo-principal.png" alt="Logo Portofino">
-    <h1>Portofino Barbería</h1>
-  </header>  <section class="servicios">
-    <h2>Servicios</h2>
-    <p>Cortes clásicos y modernos, perfilado de barba, tratamientos capilares y más.</p>
-  </section>  <section class="galeria">
-    <h2>Galería</h2>
-    <img src="logo-texto.png" alt="Logo texto Portofino">
-    <img src="logo-hoja.png" alt="Símbolo P hoja">
-  </section>  <section class="contacto">
-    <h2>Reservas</h2>
-    <p>Martes a Sábados de 9:00 a 19:00 hs</p>
-    <a class="boton-whatsapp" href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino" target="_blank">Reservar por WhatsApp</a>
-  </section>  <footer>
-    <p>Seguinos en <a href="https://instagram.com/Portofino.barber" target="_blank">@Portofino.barber</a></p>
-    <p>&copy; 2025 Portofino Barbería</p>
-  </footer>
-</body>
-</html>
