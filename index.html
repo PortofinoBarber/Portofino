@@ -1,137 +1,97 @@
 <!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofino - Peluquería</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofino Barbería</title>
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
     body {
-      font-family: 'Open Sans', sans-serif;
-      color: #fff;
-      background-color: #000;
-    }
-    header {
-      background-color: #111;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    .hero {
-      background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-    .hero h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    .hero button {
-      background-color: #fff;
-      color: #000;
-      padding: 12px 24px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-    .services, .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .services div, .gallery img {
-      background-color: #222;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .gallery img {
-      width: 100%;
-      filter: grayscale(100%);
-      transition: filter 0.3s;
-    }
-    .gallery img:hover {
-      filter: grayscale(0%);
-    }
-    .button-reserve {
-      background-color: #fff;
-      color: #000;
-      padding: 14px 30px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      background-color: #111;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 14px;
-    }
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+    }header {
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 2rem;
+}
+
+header img {
+  width: 150px;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  color: gold;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.servicios, .galeria, .contacto {
+  background-color: #1e1e1e;
+  margin-top: 2rem;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.boton-whatsapp {
+  display: inline-block;
+  background-color: gold;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: gold;
+  text-decoration: none;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Portofino</h1>
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#reserva">Reservar</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>  <section class="hero">
-    <h2>Estilo, Precisión y Lujo</h2>
-    <a href="#reserva"><button>Reservá tu turno</button></a>
-  </section>  <section class="section" id="servicios">
-    <h3>Servicios</h3>
-    <div class="services">
-      <div>Corte Clásico</div>
-      <div>Corte Degradado</div>
-      <div>Afeitado y Barba</div>
-      <div>Mascarilla Facial</div>
-    </div>
-  </section>  <section class="section" id="reserva">
-    <h3>Reserva tu turno</h3>
-    <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="button-reserve">Reservar por WhatsApp</a>
-  </section>  <section class="section gallery">
-    <h3>Antes y Después</h3>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/300x400" alt="Corte 1">
-      <img src="https://via.placeholder.com/300x400" alt="Corte 2">
-      <img src="https://via.placeholder.com/300x400" alt="Corte 3">
-    </div>
-  </section>  <footer id="contacto">
-    <p>📍 Rafaela, Santa Fe</p>
-    <p>📱 <a href="https://wa.me/549XXXXXXXXXX" style="color:#fff;">WhatsApp</a></p>
-    <p>📷 <a href="https://instagram.com/portofino" style="color:#fff;">@portofino</a></p>
-    <p>🕒 Lunes a Sábado de 9 a 20 hs</p>
+    <img src="logo-principal.png" alt="Logo Portofino">
+    <h1>Portofino Barbería</h1>
+  </header>  <section class="servicios">
+    <h2>Servicios</h2>
+    <p>Cortes clásicos y modernos, perfilado de barba, tratamientos capilares y más.</p>
+  </section>  <section class="galeria">
+    <h2>Galería</h2>
+    <img src="logo-texto.png" alt="Logo texto Portofino">
+    <img src="logo-hoja.png" alt="Símbolo P hoja">
+  </section>  <section class="contacto">
+    <h2>Reservas</h2>
+    <p>Martes a Sábados de 9:00 a 19:00 hs</p>
+    <a class="boton-whatsapp" href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino" target="_blank">Reservar por WhatsApp</a>
+  </section>  <footer>
+    <p>Seguinos en <a href="https://instagram.com/Portofino.barber" target="_blank">@Portofino.barber</a></p>
+    <p>&copy; 2025 Portofino Barbería</p>
   </footer>
 </body>
-  </html>
+</html>
