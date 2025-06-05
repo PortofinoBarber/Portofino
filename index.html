@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,15 +83,22 @@
       margin-bottom: 40px;
       color: #c9a94f;
     }
-    .services {
+    .services, .redes {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-    .services div {
+    .services div, .redes a {
       background-color: #1a1b22;
       padding: 20px;
       border-radius: 8px;
+      color: #f3f3f3;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .redes a:hover {
+      background-color: #c9a94f;
+      color: #0d0d0d;
     }
     .button-reserve {
       background-color: #c9a94f;
@@ -132,14 +138,6 @@
       background-color: #c9a94f;
       color: #0d0d0d;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
@@ -149,17 +147,13 @@
       <a href="#servicios">Servicios</a>
       <a href="#reserva">Reservar</a>
       <a href="#tips">Tips</a>
-      <a href="https://www.tiktok.com/@francomggm" target="_blank">TikTok</a>
+      <a href="#redes">Redes</a>
       <a href="#contacto">Contacto</a>
     </nav>
-  </header>
-
-  <section class="hero">
+  </header>  <section class="hero">
     <h2>Estilo, Precisión y Lujo</h2>
     <a href="#reserva"><button>Reservá tu turno</button></a>
-  </section>
-
-  <section class="section" id="servicios">
+  </section>  <section class="section" id="servicios">
     <h3>Servicios</h3>
     <div class="services">
       <div>Corte Clásico</div>
@@ -167,20 +161,21 @@
       <div>Afeitado y Barba</div>
       <div>Mascarilla Facial</div>
     </div>
-  </section>
-
-  <section class="section" id="reserva">
+  </section>  <section class="section" id="reserva">
     <h3>Reserva tu turno</h3>
     <a href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino" target="_blank" class="button-reserve">Reservar por WhatsApp</a>
-  </section>
-
-  <section class="section" id="tips">
+  </section>  <section class="section" id="tips">
     <h3>Tips & Curiosidades</h3>
     <p>Descubrí consejos para mantener tu cabello saludable, estilos que podrían interesarte y datos curiosos sobre el arte de la barbería.</p>
     <a href="https://www.instagram.com/Portofino.barber/" target="_blank" class="tips-button">Ver Tips en Instagram</a>
-  </section>
-
-  <footer id="contacto">
+  </section>  <section class="section" id="redes">
+    <h3>Nuestras Redes</h3>
+    <div class="redes">
+      <a href="https://www.instagram.com/Portofino.barber" target="_blank">📷 Instagram</a>
+      <a href="https://www.tiktok.com/@francomggm" target="_blank">🎥 Ver en TikTok</a>
+      <a href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino" target="_blank">💬 WhatsApp</a>
+    </div>
+  </section>  <footer id="contacto">
     <p>📍 Rafaela, Santa Fe</p>
     <p>📱 <a href="https://wa.me/5493492220922?text=Quiero%20reservar%20en%20Portofino">+54 9 3492 220922</a></p>
     <p>📷 <a href="https://instagram.com/Portofino.barber" target="_blank">@Portofino.barber</a></p>
